@@ -412,7 +412,11 @@ class TeSpeed:
     # Decompress gzipped response
         data = StringIO(response.read())
         gzipper = gzip.GzipFile(fileobj=data)
-        return gzipper.read()
+        try:
+            return gzipper.read()
+        except IOError as e:    # will happen on to slow connections
+            print_debug('Unable to load server list: '+e.message)
+            exit(1)
 
 
     def FindBestServer(self):
