@@ -49,7 +49,7 @@ git submodule init
 git submodule update
 ```
 
-##Usage:
+##Usage
 
 ```
 usage: tespeed.py [-h] [-ls [LISTSERVERS]] [-w] [-s] [-mib] [-n [SERVERCOUNT]]
@@ -107,7 +107,7 @@ optional arguments:
 
  *  Can measure through SOCKS proxy.
 
-#TODO (ideas):
+#TODO (ideas)
 
  *  Add more error checking.
  *  Make it less messy.
